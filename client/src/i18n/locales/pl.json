@@ -81,7 +81,7 @@
     "fullName": "Imię i nazwisko",
     "emailPlaceholder": "twoj@email.pl",
     "namePlaceholder": "Jan Kowalski",
-    "platform": "Platforma połączeń AgentLabs",
+    "platform": "Platforma połączeń UltraDialer",
     "accessCampaigns": "Zaloguj się, aby uzyskać dostęp do kampanii połączeń AI",
     "sendVerificationCode": "Kontynuuj",
     "sendingCode": "Wysyłanie kodu weryfikacyjnego...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "Siedziba AgentLabs",
+        "title": "Siedziba UltraDialer",
         "location": "San Francisco, Kalifornia"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Skonfiguruj domyślne tagi meta dla stron Twojej witryny. Mogą być nadpisane na poszczególnych stronach.",
         "defaultTitle": "Domyślny Tytuł",
         "defaultTitleTooltip": "Domyślny tag tytułu używany dla stron bez własnego tytułu. Pojawia się w kartach przeglądarki i wynikach wyszukiwania.",
-        "defaultTitlePlaceholder": "AgentLabs - Platforma Połączeń Głosowych AI",
+        "defaultTitlePlaceholder": "UltraDialer - Platforma Połączeń Głosowych AI",
         "defaultTitleHint": "Zalecane: 50-60 znaków",
         "defaultDescription": "Domyślny Opis",
         "defaultDescriptionTooltip": "Meta opis wyświetlany w wynikach wyszukiwarek. Napisz przekonujące podsumowanie zachęcające do kliknięcia.",

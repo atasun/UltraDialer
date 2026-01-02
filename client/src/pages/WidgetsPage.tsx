@@ -16,14 +16,14 @@ import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { 
-  Plus, 
-  Globe, 
-  Copy, 
-  Trash2, 
-  Edit, 
-  Phone, 
-  Clock, 
+import {
+  Plus,
+  Globe,
+  Copy,
+  Trash2,
+  Edit,
+  Phone,
+  Clock,
   Code,
   RefreshCw,
   MoreVertical,
@@ -42,7 +42,7 @@ import {
   Play,
   Check
 } from "lucide-react";
-import { 
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -235,10 +235,10 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
 
       <div className="relative h-[calc(100%-32px)]">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-slate-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-          <div className="absolute inset-0 opacity-[0.03]" style={{ 
+          <div className="absolute inset-0 opacity-[0.03]" style={{
             backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
           }} />
-          
+
           <div className="p-6 space-y-4">
             <div className="h-4 bg-foreground/10 rounded w-3/4" />
             <div className="h-3 bg-foreground/5 rounded w-full" />
@@ -254,9 +254,9 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
 
         <div className="absolute bottom-4 right-4 left-4 flex justify-end">
           <div className="relative font-sans" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
-            <div 
+            <div
               className="rounded-2xl p-4 min-w-[300px] max-w-[340px] transition-all duration-300"
-              style={{ 
+              style={{
                 backgroundColor: formData.backgroundColor || '#FFFFFF',
                 boxShadow: '0 10px 40px -10px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.05)'
               }}
@@ -309,9 +309,9 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="relative flex-shrink-0">
-                      <div 
+                      <div
                         className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden ${callState === 'active' ? 'ring-2 ring-offset-2' : ''}`}
-                        style={{ 
+                        style={{
                           backgroundColor: formData.primaryColor + '15',
                           ['--tw-ring-color' as string]: formData.primaryColor,
                           ['--tw-ring-offset-color' as string]: formData.backgroundColor
@@ -353,11 +353,11 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
 
                   {callState === 'active' && (
                     <div className="flex items-center justify-center gap-1 h-8 px-4">
-                      {[1,2,3,4,5,6,7].map((i) => (
-                        <div 
-                          key={i} 
+                      {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+                        <div
+                          key={i}
                           className="w-1 rounded-full transition-all"
-                          style={{ 
+                          style={{
                             backgroundColor: formData.primaryColor,
                             opacity: 0.6,
                             height: `${8 + Math.sin(Date.now() / 200 + i) * 12}px`,
@@ -380,9 +380,8 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
                       <button
                         onClick={() => setIsMuted(!isMuted)}
                         data-testid="button-preview-mute"
-                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-sm ${
-                          isMuted ? 'bg-red-500 text-white scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                        }`}
+                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-sm ${isMuted ? 'bg-red-500 text-white scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                          }`}
                       >
                         {isMuted ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
                       </button>
@@ -399,9 +398,9 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
               ) : (
                 <div className="flex items-center gap-3">
                   <div className="relative flex-shrink-0">
-                    <div 
+                    <div
                       className="w-14 h-14 rounded-full flex items-center justify-center overflow-hidden transition-transform hover:scale-105"
-                      style={{ 
+                      style={{
                         backgroundColor: formData.primaryColor + '12',
                         border: `2px solid ${formData.primaryColor}25`
                       }}
@@ -412,33 +411,33 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
                         <Phone className="h-6 w-6" style={{ color: formData.primaryColor }} />
                       )}
                     </div>
-                    <div 
+                    <div
                       className="absolute -bottom-0.5 -right-0.5 text-white text-[8px] px-1.5 py-0.5 rounded-full font-bold shadow-sm"
                       style={{ backgroundColor: formData.primaryColor }}
                     >
                       AI
                     </div>
-                    <div 
+                    <div
                       className="text-[10px] text-center mt-1.5 font-medium truncate max-w-[56px] leading-tight"
                       style={{ color: formData.textColor }}
                     >
                       {formData.brandName || formData.name || "Agent"}
                     </div>
                   </div>
-                  
+
                   <button
                     onClick={handleCallClick}
                     data-testid="button-preview-call"
                     className="flex items-center gap-2.5 px-5 py-3 rounded-full text-white font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
-                    style={{ 
+                    style={{
                       background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
                     }}
                   >
                     <Phone className="h-4 w-4" />
                     <span className="text-sm tracking-wide">{formData.buttonLabel || 'VOICE CHAT'}</span>
                   </button>
-                  
-                  <div 
+
+                  <div
                     data-testid="button-preview-language"
                     className="flex items-center gap-1.5 px-3 py-2 rounded-full border cursor-pointer transition-colors hover:bg-black/5"
                     style={{ borderColor: formData.textColor + '15' }}
@@ -449,9 +448,9 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
                 </div>
               )}
             </div>
-            
+
             <div className="text-center mt-2.5 text-[11px] text-foreground/40">
-              Powered by <span className="font-medium" style={{ color: formData.primaryColor }}>AgentLabs</span>
+              Powered by <span className="font-medium" style={{ color: formData.primaryColor }}>UltraDialer</span>
             </div>
           </div>
         </div>
@@ -466,8 +465,8 @@ function InteractiveWidgetPreview({ formData }: { formData: WidgetFormData }) {
           {callState !== 'idle' && (
             <>
               <div className="w-px h-3 bg-border" />
-              <button 
-                onClick={resetPreview} 
+              <button
+                onClick={resetPreview}
                 data-testid="button-preview-reset"
                 className="text-[10px] font-medium text-primary hover:underline"
               >
@@ -537,7 +536,7 @@ export default function WidgetsPage() {
       formDataToSend.append('businessTimezone', data.businessTimezone);
       formDataToSend.append('maxConcurrentCalls', String(data.maxConcurrentCalls));
       formDataToSend.append('maxCallDuration', String(data.maxCallDuration));
-      
+
       if (data.iconFile) {
         formDataToSend.append('icon', data.iconFile);
       }
@@ -591,7 +590,7 @@ export default function WidgetsPage() {
       formDataToSend.append('businessTimezone', data.businessTimezone);
       formDataToSend.append('maxConcurrentCalls', String(data.maxConcurrentCalls));
       formDataToSend.append('maxCallDuration', String(data.maxCallDuration));
-      
+
       if (data.iconFile) {
         formDataToSend.append('icon', data.iconFile);
       }
@@ -725,10 +724,10 @@ export default function WidgetsPage() {
       }
       const reader = new FileReader();
       reader.onload = (event) => {
-        setFormData({ 
-          ...formData, 
+        setFormData({
+          ...formData,
           iconFile: file,
-          iconPreview: event.target?.result as string 
+          iconPreview: event.target?.result as string
         });
       };
       reader.readAsDataURL(file);
@@ -779,8 +778,8 @@ export default function WidgetsPage() {
               {limits.currentCount}/{limits.maxWidgets} widgets
             </div>
           )}
-          <Button 
-            onClick={() => { resetForm(); setIsCreateOpen(true); }} 
+          <Button
+            onClick={() => { resetForm(); setIsCreateOpen(true); }}
             disabled={!canCreateWidget}
             data-testid="button-create-widget"
           >
@@ -793,15 +792,15 @@ export default function WidgetsPage() {
       <Tabs value={mainTab} onValueChange={setMainTab} className="flex-1 flex flex-col">
         <div className="border-b px-4 md:px-6">
           <TabsList className="h-auto p-0 bg-transparent">
-            <TabsTrigger 
-              value="widgets" 
+            <TabsTrigger
+              value="widgets"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent"
             >
               <Globe className="h-4 w-4 mr-2" />
               Widgets
             </TabsTrigger>
-            <TabsTrigger 
-              value="dashboard" 
+            <TabsTrigger
+              value="dashboard"
               className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent"
             >
               <BarChart3 className="h-4 w-4 mr-2" />
@@ -846,7 +845,7 @@ export default function WidgetsPage() {
                   <CardHeader className="pb-3">
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-3 min-w-0">
-                        <div 
+                        <div
                           className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 overflow-hidden"
                           style={{ backgroundColor: widget.primaryColor }}
                         >
@@ -883,7 +882,7 @@ export default function WidgetsPage() {
                             Regenerate Token
                           </DropdownMenuItem>
                           <DropdownMenuSeparator />
-                          <DropdownMenuItem 
+                          <DropdownMenuItem
                             onClick={() => deleteMutation.mutate(widget.id)}
                             className="text-destructive"
                             data-testid={`button-delete-widget-${widget.id}`}
@@ -944,7 +943,7 @@ export default function WidgetsPage() {
                 )}
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 gap-2">
                 <CardTitle className="text-sm font-medium">Total Calls</CardTitle>
@@ -955,7 +954,7 @@ export default function WidgetsPage() {
                 <p className="text-xs text-muted-foreground">All-time widget calls</p>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 gap-2">
                 <CardTitle className="text-sm font-medium">Total Minutes</CardTitle>
@@ -966,7 +965,7 @@ export default function WidgetsPage() {
                 <p className="text-xs text-muted-foreground">Voice conversation time</p>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 gap-2">
                 <CardTitle className="text-sm font-medium">Active Widgets</CardTitle>
@@ -1043,7 +1042,7 @@ export default function WidgetsPage() {
               {editingWidget ? "Update your website widget settings" : "Configure your new website voice widget"}
             </DialogDescription>
           </DialogHeader>
-          
+
           <div className="flex-1 overflow-hidden flex gap-6">
             <div className="flex-1 overflow-hidden flex flex-col">
               <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 overflow-hidden flex flex-col">
@@ -1052,7 +1051,7 @@ export default function WidgetsPage() {
                   <TabsTrigger value="branding">Branding</TabsTrigger>
                   <TabsTrigger value="settings">Settings</TabsTrigger>
                 </TabsList>
-                
+
                 <ScrollArea className="flex-1 pr-4 mt-4">
                   <TabsContent value="general" className="mt-0 space-y-4">
                     <div className="space-y-2">
@@ -1113,7 +1112,7 @@ export default function WidgetsPage() {
                     <div className="space-y-2">
                       <Label>Widget Icon</Label>
                       <div className="flex items-center gap-4">
-                        <div 
+                        <div
                           className="h-16 w-16 rounded-lg border-2 border-dashed flex items-center justify-center overflow-hidden cursor-pointer hover:border-primary transition-colors"
                           onClick={() => fileInputRef.current?.click()}
                         >
@@ -1189,9 +1188,8 @@ export default function WidgetsPage() {
                             key={preset.name}
                             type="button"
                             onClick={() => setFormData({ ...formData, primaryColor: preset.primary })}
-                            className={`w-8 h-8 rounded-full border-2 transition-transform hover:scale-110 ${
-                              formData.primaryColor === preset.primary ? 'ring-2 ring-offset-2 ring-primary' : ''
-                            }`}
+                            className={`w-8 h-8 rounded-full border-2 transition-transform hover:scale-110 ${formData.primaryColor === preset.primary ? 'ring-2 ring-offset-2 ring-primary' : ''
+                              }`}
                             style={{ backgroundColor: preset.primary }}
                             title={preset.name}
                           />
@@ -1327,11 +1325,10 @@ export default function WidgetsPage() {
                                 key={day.value}
                                 type="button"
                                 onClick={() => toggleDay(day.value)}
-                                className={`px-3 py-1.5 rounded-md border text-sm transition-colors ${
-                                  formData.businessDays.includes(day.value)
+                                className={`px-3 py-1.5 rounded-md border text-sm transition-colors ${formData.businessDays.includes(day.value)
                                     ? "bg-primary text-primary-foreground border-primary"
                                     : "bg-background hover-elevate"
-                                }`}
+                                  }`}
                               >
                                 {day.label}
                               </button>
@@ -1413,7 +1410,7 @@ export default function WidgetsPage() {
               Copy this code and paste it into your website's HTML, just before the closing &lt;/body&gt; tag.
             </DialogDescription>
           </DialogHeader>
-          
+
           <div className="relative mt-4">
             <ScrollArea className="h-48">
               <pre className="bg-muted p-4 rounded-lg text-xs font-mono whitespace-pre-wrap break-all">

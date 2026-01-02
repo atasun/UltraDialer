@@ -81,7 +81,7 @@
     "fullName": "Fullständigt namn",
     "emailPlaceholder": "din@email.se",
     "namePlaceholder": "Erik Svensson",
-    "platform": "AgentLabs samtalsplattform",
+    "platform": "UltraDialer samtalsplattform",
     "accessCampaigns": "Logga in för att komma åt dina AI-samtalskampanjer",
     "sendVerificationCode": "Fortsätt",
     "sendingCode": "Skickar verifieringskod...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "San Francisco, Kalifornien"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Konfigurera standard meta-taggar för dina webbsidor. Dessa kan åsidosättas på enskilda sidor.",
         "defaultTitle": "Standardtitel",
         "defaultTitleTooltip": "Standard titel-taggen som används för sidor utan egen titel. Visas i webbläsarflikar och sökresultat.",
-        "defaultTitlePlaceholder": "AgentLabs - AI-röstsamtalsplattform",
+        "defaultTitlePlaceholder": "UltraDialer - AI-röstsamtalsplattform",
         "defaultTitleHint": "Rekommenderat: 50-60 tecken",
         "defaultDescription": "Standardbeskrivning",
         "defaultDescriptionTooltip": "Meta-beskrivningen som visas i sökmotorresultat. Skriv en övertygande sammanfattning för att uppmuntra klick.",

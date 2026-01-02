@@ -1,9 +1,9 @@
-# AgentLabs Installation Guide
+# UltraDialer Installation Guide
 
 **Version:** 1.0.0  
 **Last Updated:** December 2025
 
-This guide provides comprehensive step-by-step instructions for installing and updating AgentLabs. Written for non-technical users with clear instructions.
+This guide provides comprehensive step-by-step instructions for installing and updating UltraDialer. Written for non-technical users with clear instructions.
 
 ---
 
@@ -146,9 +146,9 @@ These platforms handle server setup automatically. Just create a new project and
 sudo -u postgres psql
 
 # Create database and user (in PostgreSQL shell)
-CREATE USER agentlabs WITH PASSWORD 'your_secure_password';
-CREATE DATABASE agentlabs OWNER agentlabs;
-GRANT ALL PRIVILEGES ON DATABASE agentlabs TO agentlabs;
+CREATE USER ultradialer WITH PASSWORD 'your_secure_password';
+CREATE DATABASE ultradialer OWNER ultradialer;
+GRANT ALL PRIVILEGES ON DATABASE ultradialer TO ultradialer;
 \q
 ```
 
@@ -159,8 +159,8 @@ Add a PostgreSQL database to your project and copy the connection string provide
 
 ```bash
 # Extract the ZIP file
-unzip AgentLabs-Production-v1.0.0.zip
-cd AgentLabs
+unzip UltraDialer-Production-v1.0.0.zip
+cd UltraDialer
 
 # Set permissions
 sudo chown -R $USER:$USER .
@@ -180,7 +180,7 @@ nano .env
 
 ```bash
 # Database (REQUIRED)
-DATABASE_URL=postgresql://agentlabs:your_password@localhost:5432/agentlabs
+DATABASE_URL=postgresql://ultradialer:your_password@localhost:5432/ultradialer
 
 # Application (REQUIRED)
 NODE_ENV=production
@@ -293,7 +293,7 @@ Your admin account starts with:
 
 ## Configuring AI Engines
 
-AgentLabs supports three AI engine configurations. Configure at least one.
+UltraDialer supports three AI engine configurations. Configure at least one.
 
 ### Option 1: ElevenLabs (Recommended)
 
@@ -304,7 +304,7 @@ Best for: High-quality natural voices, global coverage
 3. Click "Create API Key"
 4. Copy the key
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Login as Admin
 2. Go to Settings > ElevenLabs Pool
 3. Click "Add Key"
@@ -323,7 +323,7 @@ Best for: Use with Plivo or as alternative AI voice
 3. Create a new secret key
 4. Copy the key (starts with `sk-`)
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > OpenAI Keys
 2. Click "Add Key"
 3. Enter a name
@@ -346,7 +346,7 @@ Configure at least one telephony provider for phone calls.
 3. Go to Console Dashboard
 4. Copy your Account SID and Auth Token
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Twilio Settings
 2. Enter Account SID
 3. Enter Auth Token
@@ -364,7 +364,7 @@ Set these URLs in Twilio for your phone numbers:
 2. Go to Dashboard
 3. Copy Auth ID and Auth Token
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Plivo Settings
 2. Enter Auth ID
 3. Enter Auth Token
@@ -386,7 +386,7 @@ Configure the payment gateways your customers will use.
 2. Go to Developers > API Keys
 3. Copy Publishable Key and Secret Key
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Payments
 2. Find Stripe section
 3. Enter Secret Key
@@ -399,7 +399,7 @@ Configure the payment gateways your customers will use.
 3. URL: `https://your-domain.com/api/webhooks/stripe`
 4. Select all `invoice.*`, `customer.subscription.*`, `checkout.session.*` events
 5. Copy the Signing Secret
-6. Add it in AgentLabs Settings
+6. Add it in UltraDialer Settings
 
 ### Razorpay (India)
 
@@ -408,7 +408,7 @@ Configure the payment gateways your customers will use.
 3. Go to Settings > API Keys
 4. Generate Key ID and Secret
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Payments
 2. Find Razorpay section
 3. Enter Key ID and Secret
@@ -425,7 +425,7 @@ Configure the payment gateways your customers will use.
 3. Create an app (choose Live for production)
 4. Copy Client ID and Secret
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Payments
 2. Find PayPal section
 3. Enter Client ID
@@ -444,7 +444,7 @@ Configure the payment gateways your customers will use.
 3. Go to Settings > API Keys
 4. Copy Public Key and Secret Key
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Payments
 2. Find Paystack section
 3. Enter Public Key
@@ -461,7 +461,7 @@ Configure the payment gateways your customers will use.
 2. Go to Your Credentials (Tus credenciales)
 3. Copy Access Token
 
-**In AgentLabs:**
+**In UltraDialer:**
 1. Go to Settings > Payments
 2. Find MercadoPago section
 3. Enter Access Token
@@ -485,7 +485,7 @@ Email is required for user verification, password resets, and notifications.
 4. Create an app password for "Mail"
 5. Copy the 16-character password
 
-**In AgentLabs Settings:**
+**In UltraDialer Settings:**
 - SMTP Host: `smtp.gmail.com`
 - SMTP Port: `587`
 - SMTP User: your Gmail address
@@ -525,14 +525,14 @@ ssh root@your-server-ip
 
 **Step 2: Stop the application**
 ```bash
-pm2 stop agentlabs
+pm2 stop ultradialer
 ```
 
 **Step 3: Backup your current installation**
 ```bash
 mkdir -p ~/backups
-cp -r /var/www/agentlabs ~/backups/agentlabs-backup-$(date +%Y%m%d)
-pg_dump -U agentlabs -d agentlabs > ~/backups/db-backup-$(date +%Y%m%d).sql
+cp -r /var/www/ultradialer ~/backups/ultradialer-backup-$(date +%Y%m%d)
+pg_dump -U ultradialer -d ultradialer > ~/backups/db-backup-$(date +%Y%m%d).sql
 ```
 
 **Step 4: Upload and extract the new version**
@@ -541,28 +541,28 @@ cd /var/www
 
 # Upload the new ZIP file to your server (use FileZilla, scp, or SFTP)
 # Then extract it to a temporary folder
-unzip AgentLabs-vX.Y.Z.zip -d agentlabs-new
+unzip UltraDialer-vX.Y.Z.zip -d ultradialer-new
 ```
 
 **Step 5: Copy your configuration and uploads to the new version**
 ```bash
 # Copy your .env file
-cp /var/www/agentlabs/.env /var/www/agentlabs-new/.env
+cp /var/www/ultradialer/.env /var/www/ultradialer-new/.env
 
 # Copy your uploads folder (if exists)
-cp -r /var/www/agentlabs/uploads /var/www/agentlabs-new/uploads 2>/dev/null || true
+cp -r /var/www/ultradialer/uploads /var/www/ultradialer-new/uploads 2>/dev/null || true
 ```
 
 **Step 6: Replace old with new**
 ```bash
 # Rename old folder
-mv /var/www/agentlabs /var/www/agentlabs-old
+mv /var/www/ultradialer /var/www/ultradialer-old
 
 # Rename new folder
-mv /var/www/agentlabs-new /var/www/agentlabs
+mv /var/www/ultradialer-new /var/www/ultradialer
 
 # Go to the new folder
-cd /var/www/agentlabs
+cd /var/www/ultradialer
 ```
 
 **Step 7: Install dependencies and update database**
@@ -574,8 +574,8 @@ npm run build
 
 **Step 8: Restart the application**
 ```bash
-pm2 delete agentlabs
-pm2 start npm --name "agentlabs" -- run start
+pm2 delete ultradialer
+pm2 start npm --name "ultradialer" -- run start
 pm2 save
 ```
 
@@ -587,7 +587,7 @@ pm2 save
 
 **Step 10: Clean up (optional, after confirming everything works)**
 ```bash
-rm -rf /var/www/agentlabs-old
+rm -rf /var/www/ultradialer-old
 ```
 
 ---
@@ -606,7 +606,7 @@ For more control over the update process, follow these detailed steps.
 
 ```bash
 # If using PM2
-pm2 stop agentlabs
+pm2 stop ultradialer
 
 # If running directly
 # Press Ctrl+C
@@ -619,10 +619,10 @@ pm2 stop agentlabs
 mkdir -p ~/backups
 
 # Backup entire application
-cp -r /var/www/agentlabs ~/backups/agentlabs-backup-$(date +%Y%m%d)
+cp -r /var/www/ultradialer ~/backups/ultradialer-backup-$(date +%Y%m%d)
 
 # Backup database separately (recommended)
-pg_dump -h localhost -U agentlabs -d agentlabs > ~/backups/database-backup-$(date +%Y%m%d).sql
+pg_dump -h localhost -U ultradialer -d ultradialer > ~/backups/database-backup-$(date +%Y%m%d).sql
 ```
 
 #### Step 3: Upload New Files
@@ -633,7 +633,7 @@ Replace all files EXCEPT:
 
 ```bash
 # Using rsync (preserves .env and uploads)
-rsync -av --exclude='.env' --exclude='uploads/' --exclude='node_modules/' /path/to/new-version/ /var/www/agentlabs/
+rsync -av --exclude='.env' --exclude='uploads/' --exclude='node_modules/' /path/to/new-version/ /var/www/ultradialer/
 ```
 
 Or using FTP: Upload new files, but do NOT delete/replace `.env` or `uploads/`.
@@ -641,7 +641,7 @@ Or using FTP: Upload new files, but do NOT delete/replace `.env` or `uploads/`.
 #### Step 4: Clear Old Dependencies
 
 ```bash
-cd /var/www/agentlabs
+cd /var/www/ultradialer
 
 # Remove old node_modules to ensure clean install
 rm -rf node_modules
@@ -676,10 +676,10 @@ npm run build
 
 ```bash
 # Delete old PM2 process (clears cached state)
-pm2 delete agentlabs
+pm2 delete ultradialer
 
 # Start fresh
-pm2 start npm --name "agentlabs" -- run start
+pm2 start npm --name "ultradialer" -- run start
 
 # Save PM2 configuration
 pm2 save
@@ -708,14 +708,14 @@ Users may need to clear their browser cache to see frontend changes:
 
 ```bash
 # Stop application
-pm2 stop agentlabs
+pm2 stop ultradialer
 
 # Restore from backup
-rm -rf /var/www/agentlabs
-cp -r ~/backups/agentlabs-backup-YYYYMMDD /var/www/agentlabs
+rm -rf /var/www/ultradialer
+cp -r ~/backups/ultradialer-backup-YYYYMMDD /var/www/ultradialer
 
 # Restart
-pm2 restart agentlabs
+pm2 restart ultradialer
 ```
 
 ---
@@ -739,15 +739,15 @@ pm2 restart agentlabs
 mkdir -p ~/backups/database
 
 # Backup database
-pg_dump -h localhost -U agentlabs -d agentlabs > ~/backups/database/backup-$(date +%Y%m%d).sql
+pg_dump -h localhost -U ultradialer -d ultradialer > ~/backups/database/backup-$(date +%Y%m%d).sql
 ```
 
 #### Files Backup
 
 ```bash
 mkdir -p ~/backups/files
-cp /var/www/agentlabs/.env ~/backups/files/env-$(date +%Y%m%d)
-cp -r /var/www/agentlabs/uploads ~/backups/files/uploads-$(date +%Y%m%d)
+cp /var/www/ultradialer/.env ~/backups/files/env-$(date +%Y%m%d)
+cp -r /var/www/ultradialer/uploads ~/backups/files/uploads-$(date +%Y%m%d)
 ```
 
 ### Automatic Daily Backups
@@ -755,7 +755,7 @@ cp -r /var/www/agentlabs/uploads ~/backups/files/uploads-$(date +%Y%m%d)
 Create a backup script:
 
 ```bash
-nano ~/backup-agentlabs.sh
+nano ~/backup-ultradialer.sh
 ```
 
 Add:
@@ -766,11 +766,11 @@ BACKUP_DIR=~/backups/$(date +%Y%m%d)
 mkdir -p $BACKUP_DIR
 
 # Backup database
-pg_dump -h localhost -U agentlabs -d agentlabs > $BACKUP_DIR/database.sql
+pg_dump -h localhost -U ultradialer -d ultradialer > $BACKUP_DIR/database.sql
 
 # Backup files
-cp /var/www/agentlabs/.env $BACKUP_DIR/
-cp -r /var/www/agentlabs/uploads $BACKUP_DIR/
+cp /var/www/ultradialer/.env $BACKUP_DIR/
+cp -r /var/www/ultradialer/uploads $BACKUP_DIR/
 
 # Remove old backups (keep 30 days)
 find ~/backups -type d -mtime +30 -exec rm -rf {} \;
@@ -781,28 +781,28 @@ echo "Backup completed: $BACKUP_DIR"
 Make executable and schedule:
 
 ```bash
-chmod +x ~/backup-agentlabs.sh
+chmod +x ~/backup-ultradialer.sh
 
 # Add to crontab (runs daily at 2 AM)
 crontab -e
-# Add: 0 2 * * * ~/backup-agentlabs.sh
+# Add: 0 2 * * * ~/backup-ultradialer.sh
 ```
 
 ### Restoring from Backup
 
 ```bash
 # Stop application
-pm2 stop agentlabs
+pm2 stop ultradialer
 
 # Restore database
-psql -h localhost -U agentlabs -d agentlabs < ~/backups/database/backup-YYYYMMDD.sql
+psql -h localhost -U ultradialer -d ultradialer < ~/backups/database/backup-YYYYMMDD.sql
 
 # Restore files
-cp ~/backups/files/env-YYYYMMDD /var/www/agentlabs/.env
-cp -r ~/backups/files/uploads-YYYYMMDD/* /var/www/agentlabs/uploads/
+cp ~/backups/files/env-YYYYMMDD /var/www/ultradialer/.env
+cp -r ~/backups/files/uploads-YYYYMMDD/* /var/www/ultradialer/uploads/
 
 # Restart
-pm2 restart agentlabs
+pm2 restart ultradialer
 ```
 
 ---
@@ -816,14 +816,14 @@ pm2 restart agentlabs
 sudo npm install -g pm2
 
 # Start application
-pm2 start npm --name "agentlabs" -- run start
+pm2 start npm --name "ultradialer" -- run start
 
 # Configure auto-restart on boot
 pm2 startup
 pm2 save
 
 # View logs
-pm2 logs agentlabs
+pm2 logs ultradialer
 
 # Monitor
 pm2 monit
@@ -835,7 +835,7 @@ pm2 monit
 sudo apt install nginx
 ```
 
-Create `/etc/nginx/sites-available/agentlabs`:
+Create `/etc/nginx/sites-available/ultradialer`:
 
 ```nginx
 server {
@@ -860,7 +860,7 @@ server {
 Enable:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/agentlabs /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/ultradialer /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -888,7 +888,7 @@ sudo certbot renew --dry-run
 A: Basic installation takes 15-30 minutes. Full configuration with all payment gateways takes 1-2 hours.
 
 **Q: Can I install on shared hosting?**
-A: No, AgentLabs requires Node.js which most shared hosting doesn't support. Use a VPS or platform like Railway/Render.
+A: No, UltraDialer requires Node.js which most shared hosting doesn't support. Use a VPS or platform like Railway/Render.
 
 **Q: What if I don't have a domain yet?**
 A: You can use your server's IP address initially (e.g., `http://123.45.67.89:5000`). Add a domain later.
@@ -976,8 +976,8 @@ sudo systemctl start postgresql
 ```bash
 # Grant permissions (in PostgreSQL shell)
 sudo -u postgres psql
-GRANT ALL PRIVILEGES ON DATABASE agentlabs TO agentlabs;
-GRANT ALL ON SCHEMA public TO agentlabs;
+GRANT ALL PRIVILEGES ON DATABASE ultradialer TO ultradialer;
+GRANT ALL ON SCHEMA public TO ultradialer;
 \q
 ```
 
@@ -985,7 +985,7 @@ GRANT ALL ON SCHEMA public TO agentlabs;
 ```bash
 # Reset password (in PostgreSQL shell)
 sudo -u postgres psql
-ALTER USER agentlabs WITH PASSWORD 'new_secure_password';
+ALTER USER ultradialer WITH PASSWORD 'new_secure_password';
 \q
 # Update DATABASE_URL in .env with new password
 ```
@@ -996,7 +996,7 @@ ALTER USER agentlabs WITH PASSWORD 'new_secure_password';
 ```bash
 pm2 status
 # If not running, start it
-pm2 start npm --name "agentlabs" -- run start
+pm2 start npm --name "ultradialer" -- run start
 ```
 
 **Firewall blocking port?**
@@ -1062,7 +1062,7 @@ telnet smtp.gmail.com 587
 1. Check Twilio/Plivo credentials are correct
 2. Verify phone numbers are purchased and active
 3. Check credits are available
-4. Look for errors in logs: `pm2 logs agentlabs`
+4. Look for errors in logs: `pm2 logs ultradialer`
 
 **Calls immediately disconnect:**
 1. Verify webhook URLs are accessible from Twilio/Plivo
@@ -1103,37 +1103,37 @@ telnet smtp.gmail.com 587
 **Application not restarting after update:**
 ```bash
 # Clear PM2 cache and restart
-pm2 delete agentlabs
-pm2 start npm --name "agentlabs" -- run start
+pm2 delete ultradialer
+pm2 start npm --name "ultradialer" -- run start
 pm2 save
 ```
 
 **View detailed logs:**
 ```bash
-pm2 logs agentlabs --lines 200
+pm2 logs ultradialer --lines 200
 ```
 
 **Application crashes repeatedly:**
 ```bash
 # Check error logs
-pm2 logs agentlabs --err
+pm2 logs ultradialer --err
 
 # Increase memory if needed
-pm2 delete agentlabs
-pm2 start npm --name "agentlabs" -- run start --node-args="--max-old-space-size=4096"
+pm2 delete ultradialer
+pm2 start npm --name "ultradialer" -- run start --node-args="--max-old-space-size=4096"
 ```
 
 ### Getting Help
 
 1. **Check logs first:**
 ```bash
-pm2 logs agentlabs --lines 100
+pm2 logs ultradialer --lines 100
 ```
 
 2. **Note the exact error message** - Copy the full error text
 
 3. **Contact support via CodeCanyon with:**
-   - Your AgentLabs version (Admin Dashboard > top bar)
+   - Your UltraDialer version (Admin Dashboard > top bar)
    - The exact error message
    - Steps to reproduce the issue
    - Your hosting environment (DigitalOcean, AWS, Railway, etc.)
@@ -1151,10 +1151,10 @@ npm run start        # Start production
 npm run build        # Build application
 npm run db:push      # Update database
 
-pm2 start npm --name "agentlabs" -- run start  # Start with PM2
-pm2 stop agentlabs   # Stop
-pm2 restart agentlabs # Restart
-pm2 logs agentlabs   # View logs
+pm2 start npm --name "ultradialer" -- run start  # Start with PM2
+pm2 stop ultradialer   # Stop
+pm2 restart ultradialer # Restart
+pm2 logs ultradialer   # View logs
 ```
 
 ### Important URLs

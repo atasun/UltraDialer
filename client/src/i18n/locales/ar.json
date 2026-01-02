@@ -87,7 +87,7 @@
     "namePlaceholder": "محمد أحمد",
     "passwordPlaceholder": "أدخل كلمة المرور",
     "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
-    "platform": "منصة AgentLabs للاتصالات",
+    "platform": "منصة UltraDialer للاتصالات",
     "accessCampaigns": "سجل الدخول للوصول إلى حملات الاتصال الذكية",
     "sendVerificationCode": "متابعة",
     "sendingCode": "جاري إرسال رمز التحقق...",
@@ -1415,7 +1415,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "مقر AgentLabs",
+        "title": "مقر UltraDialer",
         "location": "سان فرانسيسكو، كاليفورنيا"
       },
       "faq": {
@@ -3101,7 +3101,7 @@
         "description": "تكوين العلامات الوصفية الافتراضية لصفحات موقعك. يمكن تجاوزها في الصفحات الفردية.",
         "defaultTitle": "العنوان الافتراضي",
         "defaultTitleTooltip": "علامة العنوان الافتراضية المستخدمة للصفحات التي ليس لها عنوان خاص. يظهر في علامات تبويب المتصفح ونتائج البحث.",
-        "defaultTitlePlaceholder": "AgentLabs - منصة المكالمات الصوتية بالذكاء الاصطناعي",
+        "defaultTitlePlaceholder": "UltraDialer - منصة المكالمات الصوتية بالذكاء الاصطناعي",
         "defaultTitleHint": "موصى به: 50-60 حرفاً",
         "defaultDescription": "الوصف الافتراضي",
         "defaultDescriptionTooltip": "الوصف التعريفي المعروض في نتائج محركات البحث. اكتب ملخصاً مقنعاً لتشجيع النقرات.",
@@ -4012,7 +4012,7 @@
     },
     "unlock": {
       "title": "افتح تكاملات الويب هوك",
-      "description": "اربط AgentLabs مع CRM أو أتمتة التسويق أو الأنظمة المخصصة باستخدام ويب هوك قوية",
+      "description": "اربط UltraDialer مع CRM أو أتمتة التسويق أو الأنظمة المخصصة باستخدام ويب هوك قوية",
       "proFeaturesTitle": "الميزات الاحترافية تشمل:",
       "realTimeEvents": "أحداث المكالمات في الوقت الفعلي",
       "realTimeEventsDesc": "استقبال إشعارات فورية عند اكتمال المكالمات",
@@ -4049,9 +4049,9 @@
     }
   },
   "install": {
-    "title": "تثبيت AgentLabs",
+    "title": "تثبيت UltraDialer",
     "subtitle": "دعنا نقوم بإعداد منصة الاتصال الذكية",
-    "description": "إعداد حساب AgentLabs الخاص بك",
+    "description": "إعداد حساب UltraDialer الخاص بك",
     "step1": "المنظمة",
     "step2": "حساب المدير",
     "step3": "مفاتيح API",
@@ -4067,7 +4067,7 @@
     "setupApiKeys": "إعداد مفاتيح API",
     "setupLater": "الإعداد لاحقاً",
     "complete": "اكتمل الإعداد",
-    "congratulations": "حساب AgentLabs جاهز!",
+    "congratulations": "حساب UltraDialer جاهز!",
     "checking": {
       "title": "التحقق من متطلبات النظام",
       "description": "جاري التحقق من تكوين الخادم...",
@@ -4087,17 +4087,17 @@
       "adminPasswordPlaceholder": "8 أحرف كحد أدنى",
       "confirmPassword": "تأكيد كلمة المرور",
       "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
-      "installButton": "تثبيت AgentLabs"
+      "installButton": "تثبيت UltraDialer"
     },
     "installing": {
-      "title": "جاري تثبيت AgentLabs",
+      "title": "جاري تثبيت UltraDialer",
       "description": "يرجى الانتظار أثناء إعداد منصتك...",
       "settingUp": "جاري إعداد منصتك",
       "creatingDatabase": "إنشاء جداول قاعدة البيانات وحساب المدير والتكوين الأولي..."
     },
     "success": {
       "title": "اكتمل التثبيت!",
-      "description": "تم تثبيت AgentLabs بنجاح",
+      "description": "تم تثبيت UltraDialer بنجاح",
       "important": "مهم:",
       "saveCredentials": "احفظ بيانات اعتماد المدير هذه بشكل آمن. ستحتاجها لتسجيل الدخول.",
       "adminEmail": "بريد المدير الإلكتروني",

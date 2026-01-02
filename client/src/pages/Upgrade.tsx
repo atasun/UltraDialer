@@ -40,7 +40,7 @@ import { SiStripe, SiRazorpay, SiPaypal } from "react-icons/si";
 
 const PaystackIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M2 4h20v3H2V4zm0 6h20v3H2v-3zm0 6h14v3H2v-3z"/>
+    <path d="M2 4h20v3H2V4zm0 6h20v3H2v-3zm0 6h14v3H2v-3z" />
   </svg>
 );
 
@@ -206,33 +206,33 @@ export default function Upgrade() {
 
   const buildAvailableCurrencies = (): CurrencyOption[] => {
     if (!paymentGateway) return [];
-    
+
     const currencyMap = new Map<string, GatewayType[]>();
-    
+
     if (paymentGateway.stripeEnabled && paymentGateway.stripeCurrency) {
       const curr = paymentGateway.stripeCurrency.toUpperCase();
       currencyMap.set(curr, [...(currencyMap.get(curr) || []), 'stripe']);
     }
-    
+
     if (paymentGateway.razorpayEnabled) {
       currencyMap.set('INR', [...(currencyMap.get('INR') || []), 'razorpay']);
     }
-    
+
     if (paymentGateway.paypalEnabled && paymentGateway.paypalCurrency) {
       const curr = paymentGateway.paypalCurrency.toUpperCase();
       currencyMap.set(curr, [...(currencyMap.get(curr) || []), 'paypal']);
     }
-    
+
     if (paymentGateway.paystackEnabled && paymentGateway.paystackCurrency) {
       const curr = paymentGateway.paystackCurrency.toUpperCase();
       currencyMap.set(curr, [...(currencyMap.get(curr) || []), 'paystack']);
     }
-    
+
     if (paymentGateway.mercadopagoEnabled && paymentGateway.mercadopagoCurrency) {
       const curr = paymentGateway.mercadopagoCurrency.toUpperCase();
       currencyMap.set(curr, [...(currencyMap.get(curr) || []), 'mercadopago']);
     }
-    
+
     return Array.from(currencyMap.entries()).map(([code, gateways]) => ({
       code,
       symbol: currencySymbols[code] || code,
@@ -249,7 +249,7 @@ export default function Upgrade() {
 
   const MercadoPagoIcon = ({ className }: { className?: string }) => (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6z"/>
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6z" />
     </svg>
   );
 
@@ -268,7 +268,7 @@ export default function Upgrade() {
     if (!paymentGateway?.razorpayEnabled) {
       return;
     }
-    
+
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
     script.async = true;
@@ -290,7 +290,7 @@ export default function Upgrade() {
         const defaultCurrencyOption = stripeCurrencyOption || currencies[0];
         const currencyCode = defaultCurrencyOption?.code || 'USD';
         setSelectedCurrency(currencyCode);
-        
+
         // Also auto-select the default gateway for the selected currency
         const gateways = defaultCurrencyOption?.gateways || [];
         if (gateways.length > 0) {
@@ -357,7 +357,7 @@ export default function Upgrade() {
       const options = {
         key: razorpayConfig?.keyId || paymentGateway?.razorpayKeyId,
         subscription_id: data.subscriptionId,
-        name: "AgentLabs",
+        name: "UltraDialer",
         description: `${selectedPlan?.displayName} - ${billingPeriod === "yearly" ? "Yearly" : "Monthly"}`,
         handler: async function (response: any) {
           try {
@@ -473,9 +473,9 @@ export default function Upgrade() {
 
   const handleProceedToPayment = () => {
     if (!selectedPlan || !selectedGateway) return;
-    
+
     setProcessingGateway(selectedGateway);
-    
+
     switch (selectedGateway) {
       case 'stripe':
         stripeCheckout.mutate({ planId: selectedPlan.id, billingPeriod });
@@ -521,7 +521,7 @@ export default function Upgrade() {
   });
 
   const isPremium = currentPlanName !== "free";
-  
+
   const getGatewayForCurrency = (currencyCode: string): GatewayType | null => {
     const currencies = buildAvailableCurrencies();
     const currency = currencies.find(c => c.code === currencyCode);
@@ -533,18 +533,18 @@ export default function Upgrade() {
   const getPlanPrice = (plan: Plan, currencyCode: string, period: "monthly" | "yearly"): { price: string; symbol: string } => {
     const gateway = getGatewayForCurrency(currencyCode);
     const symbol = currencySymbols[currencyCode] || '$';
-    
+
     // Gateway-specific pricing with fallback to Stripe/default prices
     if (gateway === 'razorpay') {
       const price = period === "yearly" ? plan.razorpayYearlyPrice : plan.razorpayMonthlyPrice;
       return { price: price || (period === "yearly" ? plan.yearlyPrice : plan.monthlyPrice) || "0", symbol };
     }
-    
+
     // PayPal, Paystack, MercadoPago use the same base USD/EUR pricing as Stripe for now
     // Gateway-specific pricing fields can be added to the Plan schema later
-    return { 
-      price: (period === "yearly" ? plan.yearlyPrice : plan.monthlyPrice) || "0", 
-      symbol 
+    return {
+      price: (period === "yearly" ? plan.yearlyPrice : plan.monthlyPrice) || "0",
+      symbol
     };
   };
 
@@ -576,7 +576,7 @@ export default function Upgrade() {
               </p>
             </div>
           </div>
-          
+
           {/* Currency Selector */}
           {buildAvailableCurrencies().length > 1 && (
             <div className="flex items-center gap-2">
@@ -634,7 +634,7 @@ export default function Upgrade() {
 
           const monthlyPriceInfo = getPlanPrice(plan, selectedCurrency, "monthly");
           const yearlyPriceInfo = getPlanPrice(plan, selectedCurrency, "yearly");
-          
+
           const monthlyPrice = `${monthlyPriceInfo.symbol}${monthlyPriceInfo.price}`;
           const yearlyPrice = yearlyPriceInfo.price !== "0" ? `${yearlyPriceInfo.symbol}${yearlyPriceInfo.price}` : null;
 
@@ -645,13 +645,12 @@ export default function Upgrade() {
           return (
             <Card
               key={plan.id}
-              className={`relative overflow-hidden transition-all duration-200 ${
-                isCurrentPlan 
-                  ? "ring-2 ring-indigo-500 dark:ring-indigo-400 bg-indigo-50/50 dark:bg-indigo-950/20" 
+              className={`relative overflow-hidden transition-all duration-200 ${isCurrentPlan
+                  ? "ring-2 ring-indigo-500 dark:ring-indigo-400 bg-indigo-50/50 dark:bg-indigo-950/20"
                   : isRecommended && !isCurrentPlan
                     ? "ring-2 ring-slate-300 dark:ring-slate-600"
                     : "hover:border-slate-300 dark:hover:border-slate-600"
-              }`}
+                }`}
               data-testid={`card-plan-${plan.name}`}
             >
               {isRecommended && !isCurrentPlan && (
@@ -911,9 +910,8 @@ export default function Upgrade() {
                             key={gateway}
                             type="button"
                             variant={selectedGateway === gateway ? 'default' : 'outline'}
-                            className={`h-14 flex flex-col items-center justify-center gap-1 relative ${
-                              selectedGateway === gateway ? '' : 'hover-elevate'
-                            }`}
+                            className={`h-14 flex flex-col items-center justify-center gap-1 relative ${selectedGateway === gateway ? '' : 'hover-elevate'
+                              }`}
                             onClick={() => setSelectedGateway(gateway)}
                             data-testid={`button-gateway-${gateway}`}
                           >
@@ -976,13 +974,12 @@ export default function Upgrade() {
                         const Icon = info.icon;
                         return (
                           <>
-                            <div className={`rounded p-1 ${
-                              selectedGateway === 'stripe' ? 'bg-[#635bff]' :
-                              selectedGateway === 'razorpay' ? 'bg-[#072654]' :
-                              selectedGateway === 'paypal' ? 'bg-[#003087]' :
-                              selectedGateway === 'paystack' ? 'bg-[#00C3F7]' :
-                              'bg-slate-600'
-                            }`}>
+                            <div className={`rounded p-1 ${selectedGateway === 'stripe' ? 'bg-[#635bff]' :
+                                selectedGateway === 'razorpay' ? 'bg-[#072654]' :
+                                  selectedGateway === 'paypal' ? 'bg-[#003087]' :
+                                    selectedGateway === 'paystack' ? 'bg-[#00C3F7]' :
+                                      'bg-slate-600'
+                              }`}>
                               <Icon className="h-3 w-3 text-white" />
                             </div>
                             <span>Secure payment via {info.name}</span>

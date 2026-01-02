@@ -81,7 +81,7 @@
     "fullName": "氏名",
     "emailPlaceholder": "your@email.com",
     "namePlaceholder": "山田太郎",
-    "platform": "AgentLabs コーリングプラットフォーム",
+    "platform": "UltraDialer コーリングプラットフォーム",
     "accessCampaigns": "AIコーリングキャンペーンにアクセスするにはサインインしてください",
     "sendVerificationCode": "続ける",
     "sendingCode": "認証コードを送信中...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "カリフォルニア州サンフランシスコ"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "ウェブサイトページのデフォルトメタタグを設定します。個々のページで上書きできます。",
         "defaultTitle": "デフォルトタイトル",
         "defaultTitleTooltip": "独自のタイトルを持たないページに使用されるデフォルトのタイトルタグ。ブラウザのタブと検索結果に表示されます。",
-        "defaultTitlePlaceholder": "AgentLabs - AI音声通話プラットフォーム",
+        "defaultTitlePlaceholder": "UltraDialer - AI音声通話プラットフォーム",
         "defaultTitleHint": "推奨：50〜60文字",
         "defaultDescription": "デフォルト説明",
         "defaultDescriptionTooltip": "検索エンジンの結果に表示されるメタ説明。クリックを促す魅力的な要約を書いてください。",

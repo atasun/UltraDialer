@@ -81,7 +81,7 @@
     "fullName": "Nom complet",
     "emailPlaceholder": "votre@email.fr",
     "namePlaceholder": "Jean Dupont",
-    "platform": "Plateforme d'appels AgentLabs",
+    "platform": "Plateforme d'appels UltraDialer",
     "accessCampaigns": "Connectez-vous pour accéder à vos campagnes d'appels IA",
     "sendVerificationCode": "Continuer",
     "sendingCode": "Envoi du code de vérification...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "Siège d'AgentLabs",
+        "title": "Siège d'UltraDialer",
         "location": "San Francisco, Californie"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Configurez les balises meta par défaut pour les pages de votre site. Elles peuvent être remplacées sur les pages individuelles.",
         "defaultTitle": "Titre par Défaut",
         "defaultTitleTooltip": "La balise titre par défaut utilisée pour les pages sans titre propre. Apparaît dans les onglets du navigateur et les résultats de recherche.",
-        "defaultTitlePlaceholder": "AgentLabs - Plateforme d'Appels Vocaux IA",
+        "defaultTitlePlaceholder": "UltraDialer - Plateforme d'Appels Vocaux IA",
         "defaultTitleHint": "Recommandé : 50-60 caractères",
         "defaultDescription": "Description par Défaut",
         "defaultDescriptionTooltip": "La meta description affichée dans les résultats des moteurs de recherche. Rédigez un résumé convaincant pour encourager les clics.",

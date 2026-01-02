@@ -90,7 +90,7 @@
     "namePlaceholder": "John Doe",
     "passwordPlaceholder": "Enter your password",
     "confirmPasswordPlaceholder": "Re-enter password",
-    "platform": "AgentLabs Calling Platform",
+    "platform": "UltraDialer Calling Platform",
     "accessCampaigns": "Sign in to access your AI calling campaigns",
     "sendVerificationCode": "Continue",
     "sendingCode": "Sending verification code...",
@@ -1445,7 +1445,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "San Francisco, California"
       },
       "faq": {
@@ -3254,7 +3254,7 @@
     },
     "unlock": {
       "title": "Unlock Webhook Integrations",
-      "description": "Connect AgentLabs with your CRM, marketing automation, or custom systems using powerful webhooks",
+      "description": "Connect UltraDialer with your CRM, marketing automation, or custom systems using powerful webhooks",
       "proFeaturesTitle": "Pro Features Include:",
       "realTimeEvents": "Real-time Call Events",
       "realTimeEventsDesc": "Receive instant notifications when calls complete",
@@ -3291,7 +3291,7 @@
     }
   },
   "install": {
-    "title": "AgentLabs Installation",
+    "title": "UltraDialer Installation",
     "subtitle": "Let's set up your AI calling platform",
     "checking": {
       "title": "Checking System Requirements",
@@ -3316,17 +3316,17 @@
       "demoModeDescription": "Enable demo mode to showcase the platform with restricted write access. All changes will be blocked and users will see a demo banner.",
       "demoModeEnabled": "Demo mode enabled - users can only view, not modify data",
       "demoModeDisabled": "Production mode - full functionality enabled",
-      "installButton": "Install AgentLabs"
+      "installButton": "Install UltraDialer"
     },
     "installing": {
-      "title": "Installing AgentLabs",
+      "title": "Installing UltraDialer",
       "description": "Please wait while we set up your platform...",
       "settingUp": "Setting up your platform",
       "creatingDatabase": "Creating database tables, admin account, and initial configuration..."
     },
     "success": {
       "title": "Installation Complete!",
-      "description": "AgentLabs has been successfully installed",
+      "description": "UltraDialer has been successfully installed",
       "important": "Important:",
       "saveCredentials": "Save these admin credentials securely. You'll need them to login.",
       "adminEmail": "Admin Email",
@@ -4167,7 +4167,7 @@
         "description": "Configure default meta tags for your website pages. These can be overridden on individual pages.",
         "defaultTitle": "Default Title",
         "defaultTitleTooltip": "The default title tag used for pages that don't have their own title. This appears in browser tabs and search results.",
-        "defaultTitlePlaceholder": "AgentLabs - AI Voice Calling Platform",
+        "defaultTitlePlaceholder": "UltraDialer - AI Voice Calling Platform",
         "defaultTitleHint": "Recommended: 50-60 characters",
         "defaultDescription": "Default Description",
         "defaultDescriptionTooltip": "The meta description shown in search engine results. Write a compelling summary to encourage clicks.",
@@ -4656,7 +4656,7 @@
     "currentPasswordRequired": "Current password is required",
     "newPasswordRequired": "New password is required",
     "notificationPreferences": "Notification Preferences",
-    "notificationDescription": "Configure how you receive notifications and alerts from AgentLabs.",
+    "notificationDescription": "Configure how you receive notifications and alerts from UltraDialer.",
     "accountManagement": "Account Management",
     "accountManagementDescription": "Manage your account settings, data export, and account deletion.",
     "signOut": "Sign Out",

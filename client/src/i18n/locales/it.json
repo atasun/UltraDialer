@@ -81,7 +81,7 @@
     "fullName": "Nome completo",
     "emailPlaceholder": "tua@email.it",
     "namePlaceholder": "Mario Rossi",
-    "platform": "Piattaforma chiamate AgentLabs",
+    "platform": "Piattaforma chiamate UltraDialer",
     "accessCampaigns": "Accedi per gestire le tue campagne di chiamate AI",
     "sendVerificationCode": "Continua",
     "sendingCode": "Invio codice di verifica...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "San Francisco, California"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Configura i tag meta predefiniti per le pagine del tuo sito web. Possono essere sovrascritti nelle singole pagine.",
         "defaultTitle": "Titolo Predefinito",
         "defaultTitleTooltip": "Il tag titolo predefinito utilizzato per le pagine senza un titolo proprio. Appare nelle schede del browser e nei risultati di ricerca.",
-        "defaultTitlePlaceholder": "AgentLabs - Piattaforma di Chiamate Vocali IA",
+        "defaultTitlePlaceholder": "UltraDialer - Piattaforma di Chiamate Vocali IA",
         "defaultTitleHint": "Consigliato: 50-60 caratteri",
         "defaultDescription": "Descrizione Predefinita",
         "defaultDescriptionTooltip": "La meta descrizione mostrata nei risultati dei motori di ricerca. Scrivi un riassunto convincente per incoraggiare i clic.",

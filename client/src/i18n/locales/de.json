@@ -81,7 +81,7 @@
     "fullName": "Vollständiger Name",
     "emailPlaceholder": "ihre@email.de",
     "namePlaceholder": "Max Mustermann",
-    "platform": "AgentLabs Anrufplattform",
+    "platform": "UltraDialer Anrufplattform",
     "accessCampaigns": "Melden Sie sich an, um auf Ihre KI-Anrufkampagnen zuzugreifen",
     "sendVerificationCode": "Weiter",
     "sendingCode": "Verifizierungscode wird gesendet...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs Hauptsitz",
+        "title": "UltraDialer Hauptsitz",
         "location": "San Francisco, Kalifornien"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Konfigurieren Sie Standard-Meta-Tags für Ihre Website-Seiten. Diese können auf einzelnen Seiten überschrieben werden.",
         "defaultTitle": "Standardtitel",
         "defaultTitleTooltip": "Der Standard-Title-Tag für Seiten ohne eigenen Titel. Erscheint in Browser-Tabs und Suchergebnissen.",
-        "defaultTitlePlaceholder": "AgentLabs - KI-Sprachplattform",
+        "defaultTitlePlaceholder": "UltraDialer - KI-Sprachplattform",
         "defaultTitleHint": "Empfohlen: 50-60 Zeichen",
         "defaultDescription": "Standardbeschreibung",
         "defaultDescriptionTooltip": "Die Meta-Beschreibung, die in Suchmaschinenergebnissen angezeigt wird. Schreiben Sie eine überzeugende Zusammenfassung.",

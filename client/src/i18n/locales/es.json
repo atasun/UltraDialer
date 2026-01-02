@@ -81,7 +81,7 @@
     "fullName": "Nombre completo",
     "emailPlaceholder": "tu@correo.com",
     "namePlaceholder": "Juan García",
-    "platform": "Plataforma de llamadas AgentLabs",
+    "platform": "Plataforma de llamadas UltraDialer",
     "accessCampaigns": "Inicia sesión para acceder a tus campañas de llamadas con IA",
     "sendVerificationCode": "Continuar",
     "sendingCode": "Enviando código de verificación...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "San Francisco, California"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Configura las etiquetas meta predeterminadas para las páginas de tu sitio web. Pueden sobrescribirse en páginas individuales.",
         "defaultTitle": "Título Predeterminado",
         "defaultTitleTooltip": "La etiqueta de título predeterminada utilizada para páginas que no tienen su propio título. Aparece en las pestañas del navegador y en los resultados de búsqueda.",
-        "defaultTitlePlaceholder": "AgentLabs - Plataforma de Llamadas con Voz IA",
+        "defaultTitlePlaceholder": "UltraDialer - Plataforma de Llamadas con Voz IA",
         "defaultTitleHint": "Recomendado: 50-60 caracteres",
         "defaultDescription": "Descripción Predeterminada",
         "defaultDescriptionTooltip": "La meta descripción mostrada en los resultados de los motores de búsqueda. Escribe un resumen convincente para fomentar clics.",

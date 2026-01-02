@@ -81,7 +81,7 @@
     "fullName": "पूरा नाम",
     "emailPlaceholder": "आपका@ईमेल.com",
     "namePlaceholder": "राम कुमार",
-    "platform": "AgentLabs कॉलिंग प्लेटफॉर्म",
+    "platform": "UltraDialer कॉलिंग प्लेटफॉर्म",
     "accessCampaigns": "अपने AI कॉलिंग अभियानों तक पहुंचने के लिए साइन इन करें",
     "sendVerificationCode": "जारी रखें",
     "sendingCode": "सत्यापन कोड भेजा जा रहा है...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "सैन फ्रांसिस्को, कैलिफोर्निया"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "अपनी वेबसाइट पेजों के लिए डिफ़ॉल्ट मेटा टैग्स कॉन्फ़िगर करें। इन्हें व्यक्तिगत पेजों पर ओवरराइड किया जा सकता है।",
         "defaultTitle": "डिफ़ॉल्ट शीर्षक",
         "defaultTitleTooltip": "उन पेजों के लिए डिफ़ॉल्ट टाइटल टैग जिनका अपना शीर्षक नहीं है। ब्राउज़र टैब और खोज परिणामों में दिखाई देता है।",
-        "defaultTitlePlaceholder": "AgentLabs - AI वॉइस कॉलिंग प्लेटफ़ॉर्म",
+        "defaultTitlePlaceholder": "UltraDialer - AI वॉइस कॉलिंग प्लेटफ़ॉर्म",
         "defaultTitleHint": "अनुशंसित: 50-60 अक्षर",
         "defaultDescription": "डिफ़ॉल्ट विवरण",
         "defaultDescriptionTooltip": "खोज इंजन परिणामों में दिखाया गया मेटा विवरण। क्लिक को प्रोत्साहित करने के लिए एक आकर्षक सारांश लिखें।",

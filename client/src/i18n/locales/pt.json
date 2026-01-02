@@ -81,7 +81,7 @@
     "fullName": "Nome completo",
     "emailPlaceholder": "seu@email.com",
     "namePlaceholder": "João Silva",
-    "platform": "Plataforma de chamadas AgentLabs",
+    "platform": "Plataforma de chamadas UltraDialer",
     "accessCampaigns": "Entre para acessar suas campanhas de chamadas com IA",
     "sendVerificationCode": "Continuar",
     "sendingCode": "Enviando código de verificação...",
@@ -1403,7 +1403,7 @@
         }
       },
       "mapPlaceholder": {
-        "title": "AgentLabs HQ",
+        "title": "UltraDialer HQ",
         "location": "São Francisco, Califórnia"
       },
       "faq": {
@@ -2146,7 +2146,7 @@
         "description": "Configure as tags meta padrão para as páginas do seu site. Podem ser substituídas em páginas individuais.",
         "defaultTitle": "Título Padrão",
         "defaultTitleTooltip": "A tag de título padrão usada para páginas sem título próprio. Aparece nas abas do navegador e nos resultados de busca.",
-        "defaultTitlePlaceholder": "AgentLabs - Plataforma de Chamadas de Voz IA",
+        "defaultTitlePlaceholder": "UltraDialer - Plataforma de Chamadas de Voz IA",
         "defaultTitleHint": "Recomendado: 50-60 caracteres",
         "defaultDescription": "Descrição Padrão",
         "defaultDescriptionTooltip": "A meta descrição mostrada nos resultados dos mecanismos de busca. Escreva um resumo convincente para incentivar cliques.",
