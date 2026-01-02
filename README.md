@@ -2,7 +2,6 @@
 
 **Sürüm:** 1.0.0
 **Son Güncelleme:** Aralık 2025
-**Lisans:** Normal/Genişletilmiş Lisans (CodeCanyon)
 
 ---
 
