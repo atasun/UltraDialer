@@ -1,0 +1,22 @@
+node_modules
+dist
+.DS_Store
+vite.config.ts.*
+*.tar.gz
+
+# Ignore real env files
+.env
+.env.*
+*.env
+
+# ---- Runtime directories (keep empty folders) ----
+data/*
+kyc/*
+logs/*
+export/*
+
+# Re-allow folders
+!data/
+!kyc/
+!logs/
+!export/
